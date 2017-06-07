@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component }                from '@angular/core';
 
 @Component({
   selector: 'sododo',
@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prenez le temps de bien dormir !';
+
 }

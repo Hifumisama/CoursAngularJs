@@ -1,0 +1,28 @@
+<form>
+  <fieldset>
+    <legend>Venez faire une sieste.</legend>
+    <div>
+      <label>Date de réservation</label>
+      <input type="date" [(ngModel)]="dateReservationModel" name="dateReservation">
+    </div>
+
+    <div>
+      <label for="">Nom</label>
+      <input type="text" [(ngModel)]="nomModel" name="nom" value="">
+    </div>
+
+    <div>
+      <label for="">Prénom</label>
+      <input type="text" [(ngModel)]="prenomModel" name="prenom" value="">
+    </div>
+
+    <button (click)="reserver()"type="submit">Réservez !</button>
+
+  </fieldset>
+</form>
+
+<ul *ngIf=clicked>
+  <li>Date de réservation : {{dateReservationModel}}</li>
+  <li>Nom : {{ nomModel }}</li>
+  <li>Prénom : {{ prenomModel }} </li>
+</ul>
