@@ -1,4 +1,16 @@
+.formflex {
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+
+.title {
+  font-size:4em;
+  text-align:center;
+  color:#3FA9F5;
+}
+
 fieldset {
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }

@@ -1,28 +1,26 @@
-<form>
-  <fieldset>
-    <legend>Venez faire une sieste.</legend>
+<h1 class="title">Venez faire une sieste.</h1>
+<form class="formflex">
 
+  <md-input-container>
+    <input mdInput [mdDatepicker]="picker" [(ngModel)]="reservation.dateReservation" name="reservation.dateReservation" placeholder="Date de réservation">
+    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+  </md-input-container>
+  <md-datepicker #picker></md-datepicker>
+
+  <div>
     <md-input-container>
-      <input mdInput [mdDatepicker]="picker"[(ngModel)]="reservation.dateReservation" name="reservation.dateReservation" placeholder="Date de réservation">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
+      <input mdInput placeholder="Nom" [(ngModel)]="reservation.nom" name="reservation.nom">
     </md-input-container>
-    <md-datepicker #picker></md-datepicker>
+  </div>
 
-    <div>
-      <md-input-container>
-        <input mdInput placeholder="Nom" [(ngModel)]="reservation.nom" name="reservation.nom">
-      </md-input-container>
-    </div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Prenom" [(ngModel)]="reservation.prenom" name="reservation.prenom">
+    </md-input-container>
+  </div>
 
-    <div>
-      <md-input-container>
-        <input mdInput placeholder="Prenom" [(ngModel)]="reservation.prenom" name="reservation.prenom">
-      </md-input-container>
-    </div>
+  <a md-raised-button (click)="reserver()" routerLink=".">Réserver</a>
 
-    <a md-raised-button (click)="reserver()" routerLink=".">Réserver</a>
-
-  </fieldset>
 </form>
 
 <ul *ngIf=clicked>

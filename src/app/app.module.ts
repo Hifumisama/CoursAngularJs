@@ -10,6 +10,8 @@ import { MdButtonModule }             from '@angular/material';
 import { MdDatepickerModule }         from '@angular/material';
 import { MdNativeDateModule }         from '@angular/material';
 
+import { ReservationService }         from "./services/reservation.service";
+
 import { AppComponent }               from './app.component';
 import { ReservationComponent }       from './reservation/reservation.component';
 import { AccueilComponent }           from './accueil/accueil.component';
@@ -39,7 +41,9 @@ export const approute : Routes  = [
     MdDatepickerModule,
     MdNativeDateModule
   ],
-  providers: [],
+  providers: [
+    ReservationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

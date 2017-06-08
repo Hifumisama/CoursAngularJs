@@ -2,6 +2,7 @@ import { Component, OnInit }          from '@angular/core';
 
 import { Reservation }                from './reservation';
 
+import { ReservationService }         from '../services/reservation.service';
 
 @Component({
   selector: 'app-reservation',
@@ -12,12 +13,14 @@ import { Reservation }                from './reservation';
 
 
 export class ReservationComponent implements OnInit {
-
   public reservation : Reservation;
   public clicked: boolean;
 
-  constructor() {
+  constructor(
+    private reservationService :  ReservationService
+  ) {
     this.reservation = new Reservation(null, null, null);
+
     }
 
   ngOnInit() {
@@ -27,5 +30,6 @@ export class ReservationComponent implements OnInit {
   reserver() :void {
     console.log("voici le log : ", this.reservation.dateReservation, this.reservation.nom, this.reservation.prenom);
     this.clicked = true;
+    
   }
 }
