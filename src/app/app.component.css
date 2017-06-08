@@ -32,25 +32,17 @@
 
 }
 
-.title {
-  font-size:4em;
-  text-align:center;
-  color:#3FA9F5;
+.Active {
+  background:#3FA9F5;
+  color:white;
+  transition: ease-in-out 0.5s;
 }
-
-/********************
-    Ui-button Style
-*********************/
-
-.bigbutton {
-  justify-content:center;
-}
-
 /*********************
-      Header styles
+      Footer styles
 *********************/
 
 footer {
+  position:absolute;
   left:0px;
   bottom:0px;
   height:35px;

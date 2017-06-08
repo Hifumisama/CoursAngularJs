@@ -1,29 +1,32 @@
 <form>
   <fieldset>
     <legend>Venez faire une sieste.</legend>
-    <div>
-      <label>Date de réservation</label>
-      <input type="date" [(ngModel)]="dateReservationModel" name="dateReservation">
 
+    <md-input-container>
+      <input mdInput [mdDatepicker]="picker"[(ngModel)]="reservation.dateReservation" name="reservation.dateReservation" placeholder="Date de réservation">
+      <button mdSuffix [mdDatepickerToggle]="picker"></button>
+    </md-input-container>
+    <md-datepicker #picker></md-datepicker>
+
+    <div>
+      <md-input-container>
+        <input mdInput placeholder="Nom" [(ngModel)]="reservation.nom" name="reservation.nom">
+      </md-input-container>
     </div>
 
     <div>
-      <label for="">Nom</label>
-      <input type="text" [(ngModel)]="nomModel" name="nom" value="">
+      <md-input-container>
+        <input mdInput placeholder="Prenom" [(ngModel)]="reservation.prenom" name="reservation.prenom">
+      </md-input-container>
     </div>
 
-    <div>
-      <label for="">Prénom</label>
-      <input type="text" [(ngModel)]="prenomModel" name="prenom" value="">
-    </div>
-
-    <button pButton type="submit" label="Réservez" (click)="reserver()"></button>
+    <a md-raised-button (click)="reserver()" routerLink=".">Réserver</a>
 
   </fieldset>
 </form>
 
 <ul *ngIf=clicked>
-  <li>Date de réservation : {{dateReservationModel}}</li>
-  <li>Nom : {{ nomModel }}</li>
-  <li>Prénom : {{ prenomModel }} </li>
+  <li>Date de réservation : {{ reservation.dateReservation }}</li>
+  <li>Nom : {{ reservation.nom }}</li>
+  <li>Prénom : {{ reservation.prenom }} </li>
 </ul>

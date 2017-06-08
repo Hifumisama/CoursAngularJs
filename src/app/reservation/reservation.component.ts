@@ -1,5 +1,7 @@
 import { Component, OnInit }          from '@angular/core';
 
+import { Reservation }                from './reservation';
+
 
 @Component({
   selector: 'app-reservation',
@@ -11,19 +13,19 @@ import { Component, OnInit }          from '@angular/core';
 
 export class ReservationComponent implements OnInit {
 
-  public dateReservationModel: Date;
-  public nomModel: String;
-  public prenomModel: String;
+  public reservation : Reservation;
   public clicked: boolean;
 
-  constructor( ) {  }
+  constructor() {
+    this.reservation = new Reservation(null, null, null);
+    }
 
   ngOnInit() {
 
   }
 
   reserver() :void {
-    console.log("voici le log : ", this.dateReservationModel, this.prenomModel, this.nomModel);
+    console.log("voici le log : ", this.reservation.dateReservation, this.reservation.nom, this.reservation.prenom);
     this.clicked = true;
   }
 }

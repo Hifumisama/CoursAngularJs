@@ -1,27 +1,20 @@
 <header class="ui-g header">
   <p class="ui-g-5">Sododo</p>
-  <img class="ui-g-2 logo" [src] = "logosource">
+  <a class="ui-g-2" routerLink="/accueil"><img class="logo" [src] = "logosource"></a>
   <p class="ui-g-5">Prenez le temps de bien dormir !</p>
 </header>
 
 <nav>
   <ul class="ui-g navbar">
-    <li class="ui-g-1"><a>Accueil</a></li>
-    <li class="ui-g-1"><a>Reserver</a></li>
-    <li class="ui-g-1"><a>Option</a></li>
-    <li class="ui-g-1"><a>Option</a></li>
-    <li class="ui-g-1"><a>Option</a></li>
-    <li class="ui-g-1"><a>Option</a></li>
+    <li class="ui-g-1" routerLink = "/accueil" routerLinkActive="Active">Accueil</li>
+    <li class="ui-g-1" routerLink = "/reservation" routerLinkActive="Active" >Reserver</li>
+    <li class="ui-g-1" routerLinkActive="Active">Option</li>
+    <li class="ui-g-1" routerLinkActive="Active">Option</li>
+    <li class="ui-g-1" routerLinkActive="Active">Option</li>
+    <li class="ui-g-1" routerLinkActive="Active">Option</li>
   </ul>
 </nav>
 
-<div class="ui-g">
-  <p class="ui-g-12 title">Réservez votre dodospot pour un moment de bien être et de ressourcement</p>
-</div>
-
-<div class="ui-g bigbutton">
-  <button pButton type="button" class="ui-g-2" label="ZzzZzZZzz" routerLink="reservation"></button>
-</div>
 <div>
   <router-outlet></router-outlet>
 </div>
