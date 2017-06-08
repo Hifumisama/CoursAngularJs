@@ -3,8 +3,8 @@ import { Component }                from '@angular/core';
 @Component({
   selector: 'sododo',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Prenez le temps de bien dormir !';
-
+  logosource = "../assets/LogoSododo.svg" ;
 }

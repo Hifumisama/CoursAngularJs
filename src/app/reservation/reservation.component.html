@@ -4,6 +4,7 @@
     <div>
       <label>Date de réservation</label>
       <input type="date" [(ngModel)]="dateReservationModel" name="dateReservation">
+
     </div>
 
     <div>
@@ -16,7 +17,7 @@
       <input type="text" [(ngModel)]="prenomModel" name="prenom" value="">
     </div>
 
-    <button (click)="reserver()"type="submit">Réservez !</button>
+    <button pButton type="submit" label="Réservez" (click)="reserver()"></button>
 
   </fieldset>
 </form>

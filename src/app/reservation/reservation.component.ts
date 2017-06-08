@@ -1,10 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }          from '@angular/core';
+
 
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
   styleUrls: ['./reservation.component.css']
 })
+
+
+
 export class ReservationComponent implements OnInit {
 
   public dateReservationModel: Date;
@@ -12,7 +16,7 @@ export class ReservationComponent implements OnInit {
   public prenomModel: String;
   public clicked: boolean;
 
-  constructor() {  }
+  constructor( ) {  }
 
   ngOnInit() {
 

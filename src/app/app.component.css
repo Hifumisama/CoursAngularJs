@@ -1,0 +1,61 @@
+
+/*********************
+    Header styles
+*********************/
+.header {
+  background:#3FA9F5;
+  padding: 0px;
+}
+
+.header p {
+  color:white;
+  font-size:3em;
+  text-align:center;
+}
+
+.logo {
+  height:200px;
+}
+
+/*********************
+      Navbar styles
+*********************/
+.navbar {
+  justify-content: space-around;
+}
+
+.navbar li {
+  text-align:center;
+  border:1px solid black;
+  border-radius: 3px;
+  list-style-type: none;
+
+}
+
+.title {
+  font-size:4em;
+  text-align:center;
+  color:#3FA9F5;
+}
+
+/********************
+    Ui-button Style
+*********************/
+
+.bigbutton {
+  justify-content:center;
+}
+
+/*********************
+      Header styles
+*********************/
+
+footer {
+  left:0px;
+  bottom:0px;
+  height:35px;
+  width:100%;
+  background:black;
+  color:white;
+  text-align:center;
+}
