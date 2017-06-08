@@ -10,15 +10,17 @@ export class ReservationService {
 
   constructor() {
     this.reservations = [];
+
   }
 
   public creerReservation(reservation:Reservation) : void {
-    this.reservations.push(reservation);
+    this.reservations.push(Object.assign({}, reservation));
 
   }
 
   public obtenirReservations() : Reservation[] {
+    console.log(this.reservations);
     return this.reservations;
-    
+
   }
 }

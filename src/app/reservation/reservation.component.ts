@@ -16,9 +16,7 @@ export class ReservationComponent implements OnInit {
   public reservation : Reservation;
   public clicked: boolean;
 
-  constructor(
-    private reservationService :  ReservationService
-  ) {
+  constructor( private reservationService :  ReservationService ) {
     this.reservation = new Reservation(null, null, null);
 
     }
@@ -30,6 +28,8 @@ export class ReservationComponent implements OnInit {
   reserver() :void {
     console.log("voici le log : ", this.reservation.dateReservation, this.reservation.nom, this.reservation.prenom);
     this.clicked = true;
-    
+    this.reservationService.creerReservation(this.reservation);
+
+    let reservation: Reservation[] = this.reservationService.obtenirReservations();
   }
 }
