@@ -29,7 +29,6 @@ export class ReservationComponent implements OnInit {
     console.log("voici le log : ", this.reservation.dateReservation, this.reservation.nom, this.reservation.prenom);
     this.clicked = true;
     this.reservationService.creerReservation(this.reservation);
-
     let reservation: Reservation[] = this.reservationService.obtenirReservations();
   }
 }
